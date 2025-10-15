@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/luc6snx.css" />
+    <title>Siema, tu Shrot, wrzuć nam film!</title>
+  </head>
+  <body>
+    <div class="content-wrap">
+      <nav class="nav-header">
+        <div class="nav-left">
+          <div class="logo">
+            <img src="./assets/shrot-bialy-rozbryzg.png" alt="Logotyp Shrot" />
+          </div>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/shrot_official/"
+                target="_blank"
+                ><span></span> Insta</a
+              >
+            </li>
+            <li>
+              <a href="https://too.fm/qxep6we" target="_blank"
+                ><span></span> #1 album</a
+              >
+            </li>
+            <li>
+              <a href="https://too.fm/mrm4app" target="_blank"
+                ><span></span> #2 album</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="content">
+        <div class="inner-content">
+          <div class="header hero">
+            <h1>
+              <span class="sub-header">Siema!</span>
+              <span class="sub-header-small">jesteśmy</span>
+              <img
+                src="./assets/shrot-bialy-rozbryzg.png"
+                alt="Logo Shrot duże"
+              />
+            </h1>
+          </div>
+        </div>
+        <div class="upload">
+          <div class="upload-description">
+            <p>
+              Jeśli tu jesteś, to prawdopodobnie byłeś na naszym koncercie w
+              Hard Rock Caffe i pewnie chciałbyś wysłać nam nagrane przez Ciebie
+              filmy. Dziękujemy!
+            </p>
+            <p class="small">
+              Przyjmowane pliki: wszelkie formaty wideo oraz paczki ZIP/RAR
+            </p>
+          </div>
+          <div class="upload-name">
+            <input
+              type="text"
+              id="name-input"
+              placeholder="Podaj imię lub ksywę"
+            />
+          </div>
+          <div class="upload-file">
+            <input type="file" id="file-input" />
+          </div>
+          <div class="upload-btn">
+            <button type="button" id="btn">Wyślij na serwer</button>
+          </div>
+          <div class="upload-progress">
+            <div id="upload-progress-bar"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./animation.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

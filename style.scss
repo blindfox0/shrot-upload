@@ -1,0 +1,233 @@
+// main padding to content and navbar
+$main-padding: 20px;
+
+// mobile breakpoint
+$mobile: 600px;
+
+@font-face {
+  font-family: nerd;
+  src: url('./assets/nerd/SymbolsNerdFont-Regular.ttf');
+}
+
+html,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "thirsty-rough-two", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.content-wrap {
+  overflow: hidden;
+  padding: $main-padding;
+  background-image: url("./assets/bg.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: calc(100% - $main-padding - $main-padding);
+
+    .nav-left {
+      .logo {
+        img {
+          width: 120px;
+
+          @media (max-width: $mobile) {
+            width: 80px;
+          }
+        }
+      }
+    }
+
+    .nav-right {
+      margin-left: auto;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        color: #fff;
+
+        li {
+          display: inline-block;
+          margin-left: 8px;
+          font-size: 16px;
+
+          @media (max-width: $mobile) {
+            font-size: 13px;
+            margin-left: 6px;
+          }
+
+          a {
+            color: #fff;
+            text-decoration: none;
+
+            span {
+              font-family: nerd;
+              font-size: 22px;
+
+              @media (max-width: $mobile) {
+                font-size: 18px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+    margin-top: 65px;
+
+    @media (max-width: $mobile) {
+      margin-top: 20px;
+    }
+
+    .inner-content {
+      width: 100%;
+
+      .header {
+        color: #fff;
+
+        h1 {
+          text-align: center;
+
+          span {
+            display: block;
+            margin-bottom: -20px;
+
+            &.sub-header {
+              font-size: 70px;
+
+              @media (max-width: $mobile) {
+                font-size: 60px;
+              }
+            }
+
+            &.sub-header-small {
+              font-size: 40px;
+              margin-bottom: -40px;
+
+              @media (max-width: $mobile) {
+                font-size: 30px;
+              }
+            }
+          }
+
+          img {
+            width: 400px;
+
+            @media (max-width: $mobile) {
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+
+    .upload {
+      margin-top: 20px;
+      text-align: center;
+      max-width: 500px;
+      font-weight: 500;
+
+      color: #fff;
+
+      div {
+        margin-top: 10px;
+      }
+
+      .upload-description {
+        font-size: 16px;
+
+        @media (max-width: $mobile) {
+          font-size: 13px;
+        }
+
+        p {
+          &.small {
+            font-size: 13px;
+
+            @media (max-width:$mobile) {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .upload-name {
+        input {
+          border: 1px solid #fff;
+          background: transparent;
+          padding: 5px;
+          color: #fff;
+          text-align: center;
+          width: 300px;
+
+          &::placeholder {
+            color: #fff;
+          }
+        }
+      }
+
+      .upload-file {
+        input {
+          width: 200px;
+        }
+      }
+
+      .upload-btn {
+        button {
+          border: none;
+          color: #000;
+          background-color: #fff;
+          padding: 10px;
+          cursor: pointer;
+          transition: background-color 0.4s ease;
+
+          &:hover {
+            background-color: #BAB8BD;
+          }
+        }
+      }
+
+      .upload-progress {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        height: 22px;
+
+        #upload-progress-bar {
+          width: 0%;
+          height: 100%;
+          /* background-color: #4caf50; */
+          background-color: black;
+          transition: width 0.2s;
+        }
+      }
+    }
+  }
+}
